@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/78ac09112b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <h1>WeatherApp</h1>
+    </header>
+    <main class="wrapper">
+      <section class="home">
+        <div class="introduction">
+          <h2 class="introduction__title">Hi, My name is Kamil</h2>
+          <p class="introduction__description">
+            This is my first JS project! I hope you enjoy ☀️.
+          </p>
+        </div>
+      </section>
+      <section class="sidebar">
+        <div class="sidebar__search-wrapper">
+          <input
+            type="text"
+            name="search-input"
+            placeholder="Find location"
+            class="sidebar__search-input"
+          />
+          <button class="sidebar__search-button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <ul class="sidebar__last-list"></ul>
+        <hr />
+        <h2 class="sidebar__details-title">Weather Details</h2>
+        <div class="sidebar__details--wrapper">
+          <div class="sidebar__details">
+            <span class="sidebar__details--name">Wind speed</span>
+            <span class="sidebar__details--value">--</span>
+          </div>
+          <div class="sidebar__details">
+            <span class="sidebar__details--name">Pressure</span>
+            <span class="sidebar__details--value">--</span>
+          </div>
+          <div class="sidebar__details">
+            <span class="sidebar__details--name">Humidity</span>
+            <span class="sidebar__details--value">--</span>
+          </div>
+        </div>
+        <hr />
+      </section>
+    </main>
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

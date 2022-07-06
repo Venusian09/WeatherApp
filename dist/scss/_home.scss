@@ -1,0 +1,39 @@
+.home {
+  width: 70%;
+  position: relative;
+
+  .introduction {
+    left: $spacing-number;
+    bottom: $spacing-number * 2;
+    position: absolute;
+    color: $white-color;
+
+    &__title {
+      font-size: $spacing-number;
+      margin-bottom: 10px;
+    }
+    &__description {
+      font-size: 22px;
+      font-weight: 300;
+    }
+  }
+  .city-info {
+    left: $spacing-number;
+    bottom: $spacing-number * 2;
+    position: absolute;
+    display: flex;
+    color: $white-color;
+    align-items: center;
+
+    &__wrapper {
+      text-align: center;
+    }
+    &__temperature {
+      font-size: 120px;
+      margin-right: 20px;
+    }
+    &__city-name {
+      font-size: 70px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+$white-color: #fff;
+$primary-color: #829f9a;
+$secondary-color: #536160;
+
+$small-font: 1rem;
+$spacing-number: 3.75rem;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.fa-solid {
+  font-size: $small-font;
+  color: $secondary-color;
+}
+
+@mixin transition-ease {
+  transition: all 0.2s ease-in-out;
+}

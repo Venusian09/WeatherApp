@@ -1,0 +1,10 @@
+@import "config.scss";
+@import "home.scss";
+@import "header.scss";
+@import "sidebar.scss";
+
+.wrapper {
+  height: 100vh;
+  background-image: url("../img/weatherapp.jpeg");
+  display: flex;
+}

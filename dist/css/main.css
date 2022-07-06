@@ -1,0 +1,163 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.fa-solid {
+  font-size: 1rem;
+  color: #536160;
+}
+
+.home {
+  width: 70%;
+  position: relative;
+}
+
+.home .introduction {
+  left: 3.75rem;
+  bottom: 7.5rem;
+  position: absolute;
+  color: #fff;
+}
+
+.home .introduction__title {
+  font-size: 3.75rem;
+  margin-bottom: 10px;
+}
+
+.home .introduction__description {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.home .city-info {
+  left: 3.75rem;
+  bottom: 7.5rem;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .city-info__wrapper {
+  text-align: center;
+}
+
+.home .city-info__temperature {
+  font-size: 120px;
+  margin-right: 20px;
+}
+
+.home .city-info__city-name {
+  font-size: 70px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 60px;
+}
+
+header h1 {
+  color: #fff;
+}
+
+.sidebar {
+  padding: 3.75rem;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #829f9a33;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.sidebar__search-wrapper {
+  position: relative;
+}
+
+.sidebar__search-input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #536160;
+  padding: 15px 0;
+  width: 90%;
+  color: #536160;
+  font-size: 1rem;
+}
+
+.sidebar__search-button {
+  border: 0;
+  right: 0;
+  top: 50%;
+  background: transparent;
+}
+
+.sidebar__search-button .fa-solid {
+  cursor: pointer;
+}
+
+.sidebar__last-list {
+  list-style-type: none;
+}
+
+.sidebar__last-list-item {
+  text-transform: capitalize;
+  padding: 20px 0;
+  color: #536160;
+}
+
+.sidebar__details-title {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.sidebar__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.sidebar__details--name {
+  color: #fff;
+}
+
+.sidebar__details--value {
+  color: #fff;
+}
+
+.sidebar__error {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.wrapper {
+  height: 100vh;
+  background-image: url("../img/weatherapp.jpeg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=main.css.map */
