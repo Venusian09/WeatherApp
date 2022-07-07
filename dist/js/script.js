@@ -22,7 +22,7 @@ async function getData(inputValue) {
     }
     validateObjects.cityTemperature.textContent = `${kelvinToCelcius(
       data.main.temp
-    )}*C`;
+    )}°C`;
     validateObjects.cityName.textContent = data.name;
     validateObjects.cityCurrentTime.textContent = getCurrentTime(data.timezone);
 
