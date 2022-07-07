@@ -64,6 +64,7 @@ const getCurrentTime = (timeZone) => {
 
 const inputSearch = document.querySelector(".sidebar__search-input");
 const buttonSearch = document.querySelector(".sidebar__search-button");
+const searchForm = document.getElementById("search-form");
 
 const sidebarWrapper = document.querySelector(".sidebar__search-wrapper");
 const sidebarLastList = document.querySelector(".sidebar__last-list");
@@ -90,7 +91,10 @@ let validateObjects = {
   cityWeatherWrapper: null,
   errorMessage: null,
 };
-buttonSearch.addEventListener("click", () => {
+
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
   const inputSearchValue = inputSearch.value;
   inputSearch.value = "";
   if (searchOnce) {

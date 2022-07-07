@@ -27,15 +27,17 @@
       </section>
       <section class="sidebar">
         <div class="sidebar__search-wrapper">
-          <input
-            type="text"
-            name="search-input"
-            placeholder="Find location"
-            class="sidebar__search-input"
-          />
-          <button class="sidebar__search-button">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
+          <form id="search-form">
+            <input
+              type="text"
+              name="search-input"
+              placeholder="Find location"
+              class="sidebar__search-input"
+            />
+            <button type="submit" class="sidebar__search-button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
         </div>
         <ul class="sidebar__last-list"></ul>
         <hr />
