@@ -7,39 +7,59 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
 }
 
 .fa-solid {
   font-size: 1rem;
-  color: #536160;
+  color: #fff;
+}
+
+hr {
+  margin: 20px 0;
 }
 
 .home {
-  width: 70%;
+  height: 100vh;
+  width: 100%;
   position: relative;
 }
 
 .home .introduction {
-  left: 3.75rem;
-  bottom: 7.5rem;
-  position: absolute;
   color: #fff;
 }
 
 .home .introduction__title {
-  font-size: 3.75rem;
+  font-size: 40px;
   margin-bottom: 10px;
 }
 
 .home .introduction__description {
-  font-size: 22px;
   font-weight: 300;
 }
 
+@media screen and (min-width: 668px) {
+  .home .introduction {
+    left: 3.75rem;
+    bottom: 7.5rem;
+    position: absolute;
+  }
+  .home .introduction__title {
+    font-size: 3.75rem;
+  }
+  .home .introduction__description {
+    font-size: 22px;
+  }
+}
+
 .home .city-info {
-  left: 3.75rem;
-  bottom: 7.5rem;
-  position: absolute;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,17 +74,48 @@ body {
 }
 
 .home .city-info__temperature {
-  font-size: 120px;
+  font-size: 7.5rem;
   margin-right: 20px;
 }
 
 .home .city-info__city-name {
-  font-size: 70px;
+  font-size: 30px;
+}
+
+@media screen and (min-width: 668px) {
+  .home .city-info {
+    left: 3.75rem;
+    bottom: 7.5rem;
+    position: absolute;
+  }
+  .home .city-info__city-name {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  .home {
+    margin-top: 150px;
+    padding: 1.875rem;
+    text-align: center;
+    height: 50vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 header {
-  position: fixed;
-  width: 100%;
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 60px;
 }
 
@@ -73,7 +124,7 @@ header h1 {
 }
 
 .sidebar {
-  padding: 3.75rem;
+  padding: 1.875rem;
   width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,35 +150,48 @@ header h1 {
   border: 0;
   border-bottom: 2px solid #536160;
   padding: 15px 0;
-  width: 90%;
-  color: #536160;
+  width: 100%;
+  color: #fff;
   font-size: 1rem;
 }
 
 .sidebar__search-button {
   border: 0;
   right: 0;
-  top: 50%;
+  position: absolute;
+  top: 10px;
   background: transparent;
+  height: 30px;
+  width: 30px;
 }
 
 .sidebar__search-button .fa-solid {
   cursor: pointer;
+  color: #fff;
 }
 
 .sidebar__last-list {
   list-style-type: none;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .sidebar__last-list-item {
   text-transform: capitalize;
   padding: 20px 0;
-  color: #536160;
+  color: #fff;
+  font-weight: 300;
 }
 
 .sidebar__details-title {
   color: #fff;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 667px) {
+  .sidebar__details-title {
+    margin-bottom: 20px;
+  }
 }
 
 .sidebar__details {
@@ -142,6 +206,7 @@ header h1 {
 
 .sidebar__details--name {
   color: #fff;
+  font-weight: 300;
 }
 
 .sidebar__details--value {
@@ -153,11 +218,39 @@ header h1 {
   color: #fff;
 }
 
+@media screen and (max-width: 667px) {
+  .sidebar {
+    min-height: 50vh;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    padding: 3.75rem;
+  }
+}
+
 .wrapper {
   height: 100vh;
   background-image: url("../img/weatherapp.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 667px) {
+  .wrapper {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 /*# sourceMappingURL=main.css.map */

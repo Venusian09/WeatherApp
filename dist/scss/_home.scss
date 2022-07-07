@@ -1,26 +1,35 @@
 .home {
-  width: 70%;
+  height: 100vh;
+  width: 100%;
   position: relative;
 
   .introduction {
-    left: $spacing-number;
-    bottom: $spacing-number * 2;
-    position: absolute;
     color: $white-color;
 
     &__title {
-      font-size: $spacing-number;
+      font-size: 40px;
       margin-bottom: 10px;
     }
     &__description {
-      font-size: 22px;
       font-weight: 300;
+    }
+
+    @media screen and (min-width: 668px) {
+      left: $spacing-number;
+      bottom: $spacing-number * 2;
+      position: absolute;
+
+      &__title {
+        font-size: $spacing-number;
+      }
+      &__description {
+        font-size: 22px;
+      }
     }
   }
   .city-info {
-    left: $spacing-number;
-    bottom: $spacing-number * 2;
-    position: absolute;
+    flex-wrap: wrap;
+    justify-content: center;
     display: flex;
     color: $white-color;
     align-items: center;
@@ -29,11 +38,28 @@
       text-align: center;
     }
     &__temperature {
-      font-size: 120px;
+      font-size: $spacing-number * 2;
       margin-right: 20px;
     }
     &__city-name {
-      font-size: 70px;
+      font-size: 30px;
     }
+    @media screen and (min-width: 668px) {
+      left: $spacing-number;
+      bottom: $spacing-number * 2;
+      position: absolute;
+      &__city-name {
+        font-size: 70px;
+      }
+    }
+  }
+  @media screen and (max-width: 667px) {
+    margin-top: 150px;
+    padding: $spacing-number / 2;
+    text-align: center;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

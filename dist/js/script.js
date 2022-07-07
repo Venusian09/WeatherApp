@@ -1,18 +1,15 @@
 async function getData(inputValue) {
-  var mykey = config.MY_KEY;
   const apiKey =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     inputValue +
-    "&appid=" +
-    mykey +
-    "";
+    "&appid=f8b8ec19397813a2fff86a7c08346cd1";
   const response = await fetch(apiKey);
 
   if (response.status !== 200) {
     if (!document.contains(validateObjects.errorMessage)) {
       validateObjects.errorMessage = newElement("p", "sidebar__error");
       validateObjects.errorMessage.textContent =
-        "❌ Błąd! Nieprawidłowa nazwa miasta!";
+        "❌ Error! Please insert correct city name!";
       sidebarWrapper.appendChild(validateObjects.errorMessage);
     }
   } else {
@@ -29,11 +26,19 @@ async function getData(inputValue) {
     validateObjects.cityName.textContent = data.name;
     validateObjects.cityCurrentTime.textContent = getCurrentTime(data.timezone);
 
-    weatherDetails[0].textContent = `${data.wind.speed * (3.6).toFixed(2)}km/h`;
+    const windSpeed = (data.wind.speed * 3.6).toString();
+    weatherDetails[0].textContent = `${windSpeed.slice(0, 4)}km/h`;
     weatherDetails[1].textContent = `${data.main.pressure}hPa`;
     weatherDetails[2].textContent = `${data.main.humidity}%`;
     validateObjects.cityWeatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     appBackground.style.backgroundImage = `url('./img/${data.weather[0].main}.jpeg')`;
+
+    if (!inputValue == "") {
+      const lastListItem = newElement("li", "sidebar__last-list-item");
+      lastListItem.textContent = inputValue;
+      sidebarLastList.prepend(lastListItem);
+    }
+
     console.log(data);
   }
 }
@@ -117,11 +122,6 @@ buttonSearch.addEventListener("click", () => {
     validateObjects.cityWeatherWrapper.appendChild(
       validateObjects.cityWeatherIcon
     );
-    if (!inputSearchValue == "") {
-      const lastListItem = newElement("li", "sidebar__last-list-item");
-      lastListItem.textContent = inputSearchValue;
-      sidebarLastList.appendChild(lastListItem);
-    }
   }
   searchOnce = false;
   getData(inputSearchValue);

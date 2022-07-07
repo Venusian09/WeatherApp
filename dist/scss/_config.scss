@@ -13,11 +13,18 @@ $spacing-number: 3.75rem;
 
 body {
   font-family: "Open Sans", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
 }
 
 .fa-solid {
   font-size: $small-font;
-  color: $secondary-color;
+  color: $white-color;
+}
+
+hr {
+  margin: 20px 0;
 }
 
 @mixin transition-ease {

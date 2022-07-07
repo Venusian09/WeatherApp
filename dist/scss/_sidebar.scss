@@ -1,5 +1,5 @@
 .sidebar {
-  padding: $spacing-number;
+  padding: $spacing-number / 2;
   width: 30%;
   display: flex;
   justify-content: space-between;
@@ -16,33 +16,47 @@
     border: 0;
     border-bottom: 2px solid $secondary-color;
     padding: 15px 0;
-    width: 90%;
-    color: $secondary-color;
+    width: 100%;
+    color: $white-color;
     font-size: $small-font;
   }
   &__search-button {
     border: 0;
     right: 0;
-    top: 50%;
+    position: absolute;
+    top: 10px;
     background: transparent;
+    height: 30px;
+    width: 30px;
 
     .fa-solid {
       cursor: pointer;
+      color: $white-color;
     }
   }
   &__last-list {
     list-style-type: none;
+    max-height: 200px;
+    overflow-y: auto;
 
     &-item {
       text-transform: capitalize;
       padding: 20px 0;
-      color: $secondary-color;
+      color: $white-color;
+      font-weight: 300;
     }
   }
 
   &__details-title {
     color: $white-color;
     font-size: $small-font;
+
+    @media screen and (max-width: 667px) {
+      margin-bottom: 20px;
+    }
+  }
+  &__last-title {
+    @extend .__details-title;
   }
   &__details {
     display: flex;
@@ -51,6 +65,7 @@
 
     &--name {
       color: $white-color;
+      font-weight: 300;
     }
     &--value {
       color: $white-color;
@@ -59,5 +74,13 @@
   &__error {
     margin-top: 20px;
     color: $white-color;
+  }
+
+  @media screen and (max-width: 667px) {
+    min-height: 50vh;
+    width: 100%;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: $spacing-number;
   }
 }
