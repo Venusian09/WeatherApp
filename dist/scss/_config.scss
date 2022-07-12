@@ -1,6 +1,10 @@
 $white-color: #fff;
 $primary-color: #829f9a;
 $secondary-color: #536160;
+@mixin blurBg {
+  background-color: #829f9a33;
+  backdrop-filter: blur(5px);
+}
 
 $small-font: 1rem;
 $spacing-number: 3.75rem;
