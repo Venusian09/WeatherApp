@@ -85,7 +85,7 @@ hr {
 @media screen and (min-width: 668px) {
   .home .city-info {
     left: 3.75rem;
-    bottom: 7.5rem;
+    bottom: 18.75rem;
     position: absolute;
   }
   .home .city-info__city-name {
@@ -93,12 +93,86 @@ hr {
   }
 }
 
+@media screen and (max-width: 896px) and (orientation: landscape) {
+  .home .city-info {
+    bottom: 11.625rem;
+  }
+}
+
+.home .single-day-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 300px;
+  overflow-x: scroll;
+}
+
+.home .single-day-wrapper .single-day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #829f9a33;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 10px 0;
+  margin: 10px;
+}
+
+.home .single-day-wrapper .single-day__name {
+  color: #fff;
+}
+
+.home .single-day-wrapper .single-day__temp {
+  color: #fff;
+}
+
+@media screen and (min-width: 668px) {
+  .home .single-day-wrapper {
+    max-width: 100%;
+    overflow: visible;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    left: 3.75rem;
+    bottom: 7.5rem;
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 668px) and (max-width: 900px) {
+  .home .single-day-wrapper {
+    max-width: 500px;
+    overflow-x: scroll;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 896px) and (orientation: landscape) {
+  .home .single-day-wrapper {
+    bottom: 1.875rem;
+  }
+}
+
 @media screen and (max-width: 667px) {
   .home {
-    margin-top: 150px;
+    margin-top: 120px;
+    margin-bottom: 30px;
     padding: 1.875rem;
     text-align: center;
-    height: 50vh;
+    min-height: 40vh;
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -108,6 +182,10 @@ hr {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -121,6 +199,12 @@ header {
 
 header h1 {
   color: #fff;
+}
+
+@media screen and (max-width: 667px) {
+  header {
+    padding: 30px;
+  }
 }
 
 .sidebar {
@@ -153,6 +237,26 @@ header h1 {
   width: 100%;
   color: #fff;
   font-size: 1rem;
+}
+
+.sidebar__search-input::-webkit-input-placeholder {
+  color: #fff;
+  font-weight: 300;
+}
+
+.sidebar__search-input:-ms-input-placeholder {
+  color: #fff;
+  font-weight: 300;
+}
+
+.sidebar__search-input::-ms-input-placeholder {
+  color: #fff;
+  font-weight: 300;
+}
+
+.sidebar__search-input::placeholder {
+  color: #fff;
+  font-weight: 300;
 }
 
 .sidebar__search-button {
